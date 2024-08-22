@@ -53,9 +53,9 @@ The application will be running at `http://localhost:4000/api/v1`
 
 ## API Endpoints
 
-## Authentication
-
 **Note:** You can find the postman in the repository.
+
+## Authentication
 
 * **Register User:** `POST /api/v1/user/signup` – Register a new user.
 * **Login User:** `POST /api/v1/user/login` – Log in an existing user.
