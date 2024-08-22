@@ -19,6 +19,5 @@ export const cookieConfig: ICookieConfig =
         httpOnly: true,
         secure: true,
         maxAge: cookieExpiry,
-        domain: process.env.COOKIE_HOST,
         sameSite: "none",
       };
