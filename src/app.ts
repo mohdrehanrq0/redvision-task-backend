@@ -1,16 +1,16 @@
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
-import express, { NextFunction, Request, Response } from 'express';
-import fs from 'fs';
-import helmet from 'helmet';
-import morgan from 'morgan';
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import express, { NextFunction, Request, Response } from "express";
+import fs from "fs";
+import helmet from "helmet";
+import morgan from "morgan";
 
-import ErrorConstants from './constant/errorConstants';
-import statusCode from './constant/statusCode';
-import ErrorMiddleware from './middleware/error';
-import router from './route';
-import { corsRegex, corsWhitelist, environment } from './utils/config';
-import ErrorHandler from './utils/errorHandler';
+import ErrorConstants from "./constant/errorConstants";
+import statusCode from "./constant/statusCode";
+import ErrorMiddleware from "./middleware/error";
+import router from "./route";
+import { corsRegex, corsWhitelist, environment } from "./utils/config";
+import ErrorHandler from "./utils/errorHandler";
 
 const corsConfig = {
   credentials: true,
@@ -43,7 +43,7 @@ app.use("/api/v1", cors(corsConfig), router);
 
 //checking for a upload folder
 if (!fs.existsSync("./public/uploads")) {
-  fs.mkdirSync("./public/uploads");
+  fs.mkdirSync("./public/uploads", { recursive: true });
 }
 
 app.use(ErrorMiddleware);
