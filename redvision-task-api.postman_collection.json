@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "e1296b67-43b9-4f0f-a9b5-0461f26b9bdb",
+		"name": "redvision-task-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18852378",
+		"_collection_link": "https://speeding-shuttle-268067.postman.co/workspace/My-Workspace~7cc27a79-b509-403f-85f3-f4f09166e00d/collection/18852378-e1296b67-43b9-4f0f-a9b5-0461f26b9bdb?action=share&source=collection_link&creator=18852378"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test3@gmail.com\",\r\n    \"name\": \"test3\",\r\n    \"password\": \"test3\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test2@gmail.com\",\r\n    \"name\": \"test2\",\r\n    \"password\": \"test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"User added successfully.\",\r\n    \"user\": {\r\n        \"email\": \"test2@gmail.com\",\r\n        \"name\": \"test2\",\r\n        \"password\": \"$2a$10$hM6hVi9zbNg95iJ6ej0x6e4Mh1vCRjhG2kAvbAz0evmem/bGLegYS\",\r\n        \"role\": \"user\",\r\n        \"_id\": \"66c756f16a171e0dc49b4c59\",\r\n        \"createdAt\": \"2024-08-22T15:19:13.586Z\",\r\n        \"updatedAt\": \"2024-08-22T15:19:13.586Z\",\r\n        \"__v\": 0\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch user data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fetch user data example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/api/v1/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"user\": {\r\n        \"_id\": \"66c6e2ed02cb9e1fedc88f14\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"name\": \"test\",\r\n        \"password\": \"$2a$10$1PhhcOTxhk4yp3spj3odkOyl24PvlZ18Q2xnXZrMO3yD5j8LIpDBm\",\r\n        \"role\": \"user\",\r\n        \"createdAt\": \"2024-08-22T07:04:13.028Z\",\r\n        \"updatedAt\": \"2024-08-22T07:04:13.028Z\",\r\n        \"__v\": 0\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"test@gmail.com\",\r\n      \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"email\": \"test@gmail.com\",\r\n      \"password\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"User login successfully.\",\r\n    \"user\": {\r\n        \"_id\": \"66c6e2ed02cb9e1fedc88f14\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"name\": \"test\",\r\n        \"password\": \"$2a$10$1PhhcOTxhk4yp3spj3odkOyl24PvlZ18Q2xnXZrMO3yD5j8LIpDBm\",\r\n        \"role\": \"user\",\r\n        \"createdAt\": \"2024-08-22T07:04:13.028Z\",\r\n        \"updatedAt\": \"2024-08-22T07:04:13.028Z\",\r\n        \"__v\": 0\r\n    },\r\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM2ZTJlZDAyY2I5ZTFmZWRjODhmMTQiLCJpYXQiOjE3MjQzNDAwNzgsImV4cCI6MTczOTg5MjA3OH0.hZ2bf__DO9bOjzPsrroaW9obrx13ci3XWn68xjsOTP4\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/api/v1/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"User loggedOut successfully.\"\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "image upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ASUS/Downloads/mit-evaluating-performance-0-21617358969.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "image upload example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/ASUS/Downloads/Guide-to-Powerful-WhatsApp-Marketing-for-E-commerce-thegem-blog-default.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog/upload",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"upload"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"File uploaded successfully\",\r\n    \"url\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724340412/redvision-task/1724340396089-mit-evaluating-performance-0-21617358969.jpg\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "update blog",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"this is a titlw update...\",\r\n    \"subtitle\": \"this is subtitle update...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog//update/:blogId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"",
+								"update",
+								":blogId"
+							],
+							"variable": [
+								{
+									"key": "blogId",
+									"value": "66c758fa29a2df47a9233faf"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update blog example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"this is a titlw update...\",\r\n    \"subtitle\": \"this is subtitle update...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog//update/:blogId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"",
+										"update",
+										":blogId"
+									],
+									"variable": [
+										{
+											"key": "blogId",
+											"value": "66c758fa29a2df47a9233faf"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"Blog update successfully.\",\r\n    \"blog\": {\r\n        \"_id\": \"66c758fa29a2df47a9233faf\",\r\n        \"title\": \"this is a titlw update...\",\r\n        \"subtitle\": \"this is subtitle update...\",\r\n        \"content\": \"This is a content\",\r\n        \"slug\": \"this-is-a-titlw\",\r\n        \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n        \"userId\": \"66c5e3261c375321dc98aab6\",\r\n        \"createdAt\": \"2024-08-22T15:27:54.519Z\",\r\n        \"updatedAt\": \"2024-08-22T15:29:39.160Z\",\r\n        \"__v\": 0\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "blog details using slug",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog/:slug",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "this-is-a-titlw"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "blog details using slug",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog/:slug",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										":slug"
+									],
+									"variable": [
+										{
+											"key": "slug",
+											"value": "testing-blog-title"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"Blog fetch successfully.\",\r\n    \"blog\": {\r\n        \"_id\": \"66c758fa29a2df47a9233faf\",\r\n        \"title\": \"this is a titlw\",\r\n        \"subtitle\": \"this is subtitle\",\r\n        \"content\": \"This is a content\",\r\n        \"slug\": \"this-is-a-titlw\",\r\n        \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n        \"userId\": \"66c5e3261c375321dc98aab6\",\r\n        \"createdAt\": \"2024-08-22T15:27:54.519Z\",\r\n        \"updatedAt\": \"2024-08-22T15:27:54.519Z\",\r\n        \"__v\": 0\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "create blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"this is a titlw\",\r\n    \"subtitle\": \"this is subtitle\",\r\n    \"content\": \"This is a content\",\r\n    \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n    \"userId\": \"66c5e3261c375321dc98aab6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create blog example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"this is a titlw\",\r\n    \"subtitle\": \"this is subtitle\",\r\n    \"content\": \"This is a content\",\r\n    \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n    \"userId\": \"66c5e3261c375321dc98aab6\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"Blog created successfully.\",\r\n    \"blog\": {\r\n        \"title\": \"this is a titlw\",\r\n        \"subtitle\": \"this is subtitle\",\r\n        \"content\": \"This is a content\",\r\n        \"slug\": \"this-is-a-titlw\",\r\n        \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n        \"userId\": \"66c5e3261c375321dc98aab6\",\r\n        \"_id\": \"66c758fa29a2df47a9233faf\",\r\n        \"createdAt\": \"2024-08-22T15:27:54.519Z\",\r\n        \"updatedAt\": \"2024-08-22T15:27:54.519Z\",\r\n        \"__v\": 0\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "delete blogs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog/delete/:blogId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"delete",
+								":blogId"
+							],
+							"variable": [
+								{
+									"key": "blogId",
+									"value": "66c758fa29a2df47a9233faf"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete blogs example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog/delete/:blogId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"delete",
+										":blogId"
+									],
+									"variable": [
+										{
+											"key": "blogId",
+											"value": "66c758fa29a2df47a9233faf"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"Blog deleted successfully.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch all blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/blog/get-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"get-all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fetch all blog example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/api/v1/blog/get-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"get-all"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"success\": true,\r\n    \"message\": \"Fetch all blogs\",\r\n    \"blog\": [\r\n        {\r\n            \"_id\": \"66c758fa29a2df47a9233faf\",\r\n            \"title\": \"this is a titlw update...\",\r\n            \"subtitle\": \"this is subtitle update...\",\r\n            \"content\": \"This is a content\",\r\n            \"slug\": \"this-is-a-titlw\",\r\n            \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724250680/redvision-task/1724250678010-alertIcon.png\",\r\n            \"userId\": \"66c5e3261c375321dc98aab6\",\r\n            \"createdAt\": \"2024-08-22T15:27:54.519Z\",\r\n            \"updatedAt\": \"2024-08-22T15:29:39.160Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"66c6e3cb02cb9e1fedc88f25\",\r\n            \"title\": \"Instant Placeholder Images\",\r\n            \"subtitle\": \"Need placeholder images on the fly?\",\r\n            \"content\": \"Need placeholder images on the fly? DummyJSON Server generates dynamic images instantly, eliminating the need for image hunting or complex server setups. Just plug in and enjoy hassle-free image generation for all your development needs!\",\r\n            \"slug\": \"instant-placeholder-images\",\r\n            \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724310473/redvision-task/1724310469652-screenshot-www.app.aisensy.com-2024.06.30-12_40_06.png\",\r\n            \"userId\": \"66c6e2dc02cb9e1fedc88f12\",\r\n            \"createdAt\": \"2024-08-22T07:07:55.094Z\",\r\n            \"updatedAt\": \"2024-08-22T07:07:55.094Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"66c6e39102cb9e1fedc88f1d\",\r\n            \"title\": \"Lorem Ipsum is simply dummy text of the printing \",\r\n            \"subtitle\": \"Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized \",\r\n            \"content\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\",\r\n            \"slug\": \"lorem-ipsum-is-simply-dummy-text-of-the-printing-\",\r\n            \"image\": \"https://res.cloudinary.com/dwv7fnwns/image/upload/v1724310415/redvision-task/1724310410799-mit-evaluating-performance-0-21617358969.jpg\",\r\n            \"userId\": \"66c6e2dc02cb9e1fedc88f12\",\r\n            \"createdAt\": \"2024-08-22T07:06:57.592Z\",\r\n            \"updatedAt\": \"2024-08-22T07:06:57.592Z\",\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
