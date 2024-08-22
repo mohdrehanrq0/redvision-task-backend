@@ -1,5 +1,7 @@
 import bcrypt from "bcryptjs";
 
+import { ICookieConfig } from "./interface";
+
 export const hashPassword = (password: string) => {
   return bcrypt.hashSync(password, 10);
 };
@@ -10,7 +12,7 @@ export const comparePassword = (password: string, hashPassword: string) => {
 
 export const cookieExpiry = 90 * 24 * 3600 * 1000;
 
-export const cookieConfig =
+export const cookieConfig: ICookieConfig =
   process.env.NODE_ENV === "local"
     ? { httpOnly: true, secure: false, maxAge: cookieExpiry }
     : {
@@ -18,5 +20,5 @@ export const cookieConfig =
         secure: true,
         maxAge: cookieExpiry,
         domain: process.env.COOKIE_HOST,
-        sameSite: "None",
+        sameSite: "none",
       };
