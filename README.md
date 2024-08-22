@@ -28,6 +28,7 @@ Create a `.env` file in the root directory and include the following environment
     CLOUDINARY_API_KEY=# Cloudinary API key
     CLOUDINARY_API_SECRET= # Cloudinary API secret
     COOKIE_HOST=  # Cookie host for deployment
+    NODE_ENV=local  #environment variable
 ```
 
 ### 3. Install Dependencies and Start the Application
