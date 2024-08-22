@@ -18,4 +18,5 @@ export const cookieConfig =
         secure: true,
         maxAge: cookieExpiry,
         domain: process.env.COOKIE_HOST,
+        sameSite: "None",
       };
